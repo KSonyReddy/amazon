@@ -1,0 +1,152 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url('https://img.freepik.com/premium-photo/computer-notebook-laptop-table-electronics-department-store-shopping-mall-blur-background_293060-9010.jpg') no-repeat center center/cover;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blur overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.2); /* white overlay tint */
+  z-index: 0;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+  padding: 16px;
+}
+
+.brand {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f0c14b;
+  margin-bottom: 10px;
+}
+
+.rating .count {
+  font-size: 13px;
+  color: #555;
+  margin-left: 6px;
+}
+
+/* Price */
+.price {
+  margin-bottom: 10px;
+}
+
+.new-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #B12704;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.discount {
+  color: green;
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+/* Prime Badge */
+.prime img {
+  width: 90px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.add-cart {
+  background-color: #ffd814;
+  color: #111;
+}
+
+.add-cart:hover {
+  background-color: #f7ca00;
+}
+
+.buy-now {
+  background-color: #f08804;
+  color: white;
+}
+
+.buy-now:hover {
+  background-color: #d37800;
+}
